@@ -7,6 +7,70 @@
   pointer-events: none;
 }
 
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+}
+
+footer {
+  background-color: #f1f1f1;
+  padding: 1em;
+  text-align: center;
+  width: 100%;
+}
+
+.app input,
+.app button,
+.app textarea {
+  background-color: white;
+  color: black;
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+  background-color: #333;
+  color: white;
+}
+
+.dark-mode input,
+.dark-mode button,
+.dark-mode textarea 
+.dark-mode nav {
+  background-color: #555;
+  color: white;
+  border: 1px solid #777;
+}
+
+.navbar-dark {
+  background-color: #444;
+}
+
+.navbar-dark .navbar-brand,
+.navbar-dark .nav-link,
+.navbar-dark .navbar-toggler-icon {
+  color: white;
+}
+
+.navbar-dark .navbar-toggler-icon {
+  filter: invert(1);
+}
+
+.about{
+  height: 100vh;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

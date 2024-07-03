@@ -20,13 +20,15 @@ function App() {
     initTodo = JSON.parse(localStorage.getItem("todos"));
   }
 
+  const [todos, setTodos] = useState(initTodo);
+  const [darkMode, setDarkMode] = useState(false);
+
+  useEffect(() => {
+    localStorage.setItem("todos", JSON.stringify(todos));
+  }, [todos])
 
   const onDelete = (todo) => {
     console.log("I am ondelete of todo", todo);
-    // Deleting this way in react does not work
-    // let index = todos.indexOf(todo);
-    // todos.splice(index, 1);
-
     setTodos(todos.filter((e) => {
       return e !== todo;
     }));
@@ -52,30 +54,32 @@ function App() {
     console.log(myTodo);
   }
 
-  const [todos, setTodos] = useState(initTodo);
-  useEffect(() => {
-    localStorage.setItem("todos", JSON.stringify(todos));
-  }, [todos])
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+  };
 
-  return ( 
-    <> 
-    <Router>
-      <Header title="My Todos List" searchBar={false} /> 
-      <Switch>
-          <Route exact path="/" render={()=>{
-            return(
-            <>
-            <AddTodo addTodo={addTodo} />
-            <Todos todos={todos} onDelete={onDelete} /> 
-            </>)
-          }}> 
-          </Route>
-          <Route exact path="/about">
-            <About />
-          </Route> 
-        </Switch> 
-      <Footer />
-    </Router>
+  return (
+    <>
+      <Router>
+        <div className={darkMode ? 'app dark-mode' : 'app'}>
+          <Header title="Todos List" searchBar={false} darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+          <Switch>
+            <Route exact path="/" render={() => {
+              return (
+                <>
+                  <AddTodo addTodo={addTodo} />
+                  <Todos todos={todos} onDelete={onDelete} />
+                </>
+              )
+            }}>
+            </Route>
+            <Route exact path="/about">
+              <About />
+            </Route>
+          </Switch>
+          <Footer />
+        </div>
+      </Router>
     </>
   );
 }

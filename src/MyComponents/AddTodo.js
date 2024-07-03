@@ -17,10 +17,10 @@ export const AddTodo = ({ addTodo }) => {
         }
     }
     return (
-        <div className="container my-3">
+        <div className="container mt-5">
             <h3>Add a Todo</h3>
             <form onSubmit={submit}>
-                <div className="mb-3">
+                <div className="mb-3 mt-4">
                     <label htmlFor="title" className="form-label">Todo Title</label>
                     <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} className="form-control" id="title" aria-describedby="emailHelp" />
 

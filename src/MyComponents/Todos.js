@@ -3,7 +3,7 @@ import {TodoItem} from "./TodoItem";
 
 export const Todos = (props) => {
     let myStyle = {
-        minHeight: "70vh",
+        minHeight: "50vh",
         margin: "40px auto"
     }
     return (
