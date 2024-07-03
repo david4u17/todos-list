@@ -31,6 +31,21 @@ footer {
   width: 100%;
 }
 
+.cool-border {
+  border: 2px solid black; 
+  border-radius: 20px;
+  border-image: linear-gradient(to right, #ff9900, #ff0055); 
+  border-image-slice: 1; 
+}
+
+.cool-border-dark {
+  border: 2px solid transparent; 
+  border-radius: 20px;
+  border-image: linear-gradient(to right, #ff00e6, #5256a0); 
+  border-image-slice: 1; 
+}
+
+
 .app input,
 .app button,
 .app textarea {

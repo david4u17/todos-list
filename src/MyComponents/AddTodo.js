@@ -17,10 +17,17 @@ export const AddTodo = ({ addTodo }) => {
         }
     }
     return (
-        <div className="container mt-5">
-            <h3>Add a Todo</h3>
+        <>
+        <div className='head-text' style={{ backgroundColor:'#5256a0', borderRadius:'20px 20px 0 0', padding:'10px' , margin:'0 -12px'}}> 
+        <h3 className='text-center'>Add a Todo</h3>
+        </div>
+       
+        <div className="container mt-4 justify-content-center align-items-center" style={{ width: '800px' }}>
+            <div className='justify-content-center'>
+
+          
             <form onSubmit={submit}>
-                <div className="mb-3 mt-4">
+                <div className="mb-3 mt-5">
                     <label htmlFor="title" className="form-label">Todo Title</label>
                     <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} className="form-control" id="title" aria-describedby="emailHelp" />
 
@@ -31,6 +38,8 @@ export const AddTodo = ({ addTodo }) => {
                 </div>
                 <button type="submit" className="btn btn-sm btn-success">Add Todo</button>
             </form>
+            </div>
         </div>
+        </>
     )
 }
