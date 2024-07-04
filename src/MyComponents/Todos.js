@@ -10,7 +10,7 @@ export const Todos = (props) => {
     return (
         <div className="container mt-5 justify-content-center align-items-center" style={{ width: '800px', height: '100%' }}>
 
-            <div>
+            <div className='mb-3'>
                 <h3 className="my-5 text-center">Todos List</h3>
                 {props.todos.length === 0 ? "No Todos to display" :
                     props.todos.map((todo) => {

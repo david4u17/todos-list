@@ -18,7 +18,7 @@ export const AddTodo = ({ addTodo }) => {
     }
     return (
         <>
-        <div className='head-text' style={{ backgroundColor:'#5256a0', borderRadius:'20px 20px 0 0', padding:'10px' , margin:'0 -12px'}}> 
+        <div className='head-text' style={{ backgroundColor:'#5256a0', borderRadius:'20px 20px 0 0', padding:'10px' , margin:'0 -12px',  color:'white'}}> 
         <h3 className='text-center'>Add a Todo</h3>
         </div>
        
