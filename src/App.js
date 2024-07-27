@@ -67,7 +67,7 @@ function App() {
             <Route exact path="/" render={() => {
               return (
                 <>
-                <div className="container my-5 justify-content-center align-items-center" style={{ width: '900px', 'border-radius': '20px' , border: darkMode ? '2px solid white' : '2px solid black' }}>
+                <div className="container my-5 pb-2 justify-content-center align-items-center" style={{ width: '900px', 'border-radius': '20px' , border: darkMode ? '2px solid white' : '2px solid black' }}>
                   <AddTodo addTodo={addTodo} />
                   <Todos todos={todos} onDelete={onDelete} />
                 </div>
